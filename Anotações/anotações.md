@@ -10,3 +10,7 @@ javaScrip = Roda no client
 PHP = Roda no servidor
 
 jQuery = biblioteca de Js estudo a parte
+
+ordem de precedencia: saber aonde esta iniciando o script.
+
+inferencia = e o tipo da variavel 

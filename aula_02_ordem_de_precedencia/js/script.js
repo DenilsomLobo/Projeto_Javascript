@@ -1,0 +1,1 @@
+document.getElementById('nome').value = 'Novo Valor para o input'
