@@ -34,37 +34,40 @@
 
     <section>
         <articler class="row">
-            <a name="tb_1"><h3 class="p-3 mb-2 bg-primary text-light display-2 text-start float-sm-left col-12">Atividade numero 01:</h3></a>
-            <p class="text-start col-6"><a class="page-link" href="atividade_01.html"> Clique aqui <span>&raquo;</span></a></p>
+            <a name="tb_1"><h3 class="p-3 mb-2 bg-primary text-light display-2 text-start float-sm-left col-12">Atividade numero 06:</h3></a>
+            <script>
+                //Declaração:
+                descontado = ''
+                salario = ''
+
+                //Variavel:
+                ganho = prompt('Insira o quanto você ganha por hora: ')
+                horas = prompt('Insira o número de horas trabalhadas no mês: ')
+
+                //Casting
+                ganho = parseFloat(ganho)
+                horas = parseFloat(horas)
+
+                //calculos:
+
+                salario = ganho * horas
+                desconto_1 = salario *11/100
+                desconto_2 = salario *8/100
+                desconto_3 = salario *5/100
+
+                descontado = salario - desconto_1 - desconto_2 - desconto_3
+
+            </script>
+            <p class="col-12 display-6 m-2">Quanto você ganha por hora: <script>document.write(`${ganho}`)</script></p>
+            <p class="col-12 display-6 m-2">Quantas horas você trabahou: <script>document.write(`${horas}`)</script></p>
+            <p class="col-12 display-6 m-2">Seu salário bruto: <script>document.write(`${salario}`)</script></p>
+            <p class="col-12 display-6 m-2">Desconto do IR: <script>document.write(`${desconto_1}`)</script></p>
+            <p class="col-12 display-6 m-2">Desconto do INSS: <script>document.write(`${desconto_2}`)</script></p>
+            <p class="col-12 display-6 m-2">Desconto do Sindicato: <script>document.write(`${desconto_3}`)</script></p>
+            <hr>
+            <p class="col-12 display-6 m-2">Seu salario: <script>document.write(`${descontado}`)</script> </p>
+            <p class="text-start col-6 m-2"><a class="page-link" href="atividade_06.html"> Nova consulta <span>&raquo;</span></a></p>
         </article>
-
-
-        <articler class="row">
-            <a name="tb_2"><h3 class="p-3 mb-2 bg-primary text-light display-2 text-start float-sm-left col-12">Atividade numero 02:</h3></a>
-            <p class="text-start col-6"><a class="page-link" href="atividade_02.html"> Clique aqui <span>&raquo;</span></a></p>
-        </article>
-
-        <articler class="row">
-            <a name="tb_3"></a><h3 class="p-3 mb-2 bg-primary text-light display-2 text-start float-sm-left col-12">Atividade numero 03:</h3></a>
-            <p class="text-start col-6"> <span class="bullet"><a class="page-link" href="atividade_03.html"> Clique aqui <span>&raquo;</span></a></p>
-        </article>
-
-        <articler class="row">
-            <a name="tb_4"></a><h3 class="p-3 mb-2 bg-primary text-light display-2 text-start float-sm-left col-12">Atividade numero 04:</h3></a>
-            <p class="text-start col-6"> <span class="bullet"><a class="page-link" href="atividade_04.html"> Clique aqui <span>&raquo;</span></a></p>
-        </article>
-
-
-        <articler class="row">
-            <a name="tb_5"></a><h3 class="p-3 mb-2 bg-primary text-light display-2 text-start float-sm-left col-12">Atividade numero 05:</h3></a>
-            <p class="text-start col-6"> <span class="bullet"><a class="page-link" href="atividade_05.html"> Clique aqui <span>&raquo;</span></a></p>
-        </article>
-
-        <articler class="row">
-            <a name="tb_5"></a><h3 class="p-3 mb-2 bg-primary text-light display-2 text-start float-sm-left col-12">Atividade numero 06:</h3></a>
-            <p class="text-start col-6"> <span class="bullet"><a class="page-link" href="atividade_06.html"> Clique aqui <span>&raquo;</span></a></p>
-        </article>
-
     </section>
 
     <br>
