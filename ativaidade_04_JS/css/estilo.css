@@ -1,0 +1,42 @@
+body{
+    background-color: #F2F0EB;
+}
+
+nav ul li a {
+    color:aliceblue;
+    font-size: 1em;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.0em;
+}
+
+p {
+    font-size: 1.9em;
+    color: black;
+}
+
+th {
+    font-size: 1.9em;
+}
+
+td {
+    font-size: 1.9em;
+}
+
+a:hover {
+    color: blue;
+}
+
+
+#container {
+    margin: 0px auto;
+    width: 90%;
+}
+
+.bullet {
+    font-size: 1.5em;
+    padding: 5px;
+}
+
