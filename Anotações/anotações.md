@@ -16,3 +16,5 @@ ordem de precedencia: saber aonde esta iniciando o script.
 inferencia = e o tipo da variavel 
 
 site para montar objeto educacional = https://h5p.org/
+
+ECMA 6 = Leitura para JavaScript => aprender normas
