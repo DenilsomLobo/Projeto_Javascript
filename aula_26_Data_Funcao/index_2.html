@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Funções Data</title>
+</head>
+
+<body>
+    <main class="p-4">
+        <header>
+            <h1>Calcular dias entre datas</h1>
+            <hr>
+        </header>
+
+        <script>
+
+            //Criando o objeto data
+            // 1 de Janeiro
+            let data_1 = new Date(2022, 0, 1)
+            // 5 de Maio
+            let data_2 = new Date(2022, 4, 5)
+
+            //Mostrar as datas de forma textual
+            document.write(`<h5>Data 1 em milissegundos: ${data_1.getTime()}</h5>`)
+            document.write(`<h5>Data 2 em milissegundos: ${data_2.getTime()}</h5>`)
+            document.write(`<hr>`)
+
+            //Data completa
+            let tot_milissegundos = Math.abs(data_1.getTime() - data_2.getTime())
+            document.write(`<h4>Diferença entre as datas: ${tot_milissegundos}</h4>`)
+            document.write(`<hr>`)
+
+            //Calculando os milissegundos de 1 dia
+            let milissegundos_dia = 1 * 24 * 60 * 60 *1000
+
+            //1 dia tem tantos milisseguntos
+            document.write(`<h3>1 dia tem ${milissegundos_dia} milissegundos<h3>`)
+            document.write(`<hr>`)
+
+            //Então, do dia 1/1/2021 a 5/2/2021 tem:
+            dias = tot_milissegundos / milissegundos_dia
+
+            document.write(`<h2>De 1/01/2021 a 05/02/2021 tem ${dias} dias!</h2>`)
+            document.write(`<hr>`)
+
+            //Recuperando a data atual do sistema
+            //Receita de bolo :)
+            var data = new Date();
+            var dia = String(data.getDate()).padStart(2, '0');
+            var mes = String(data.getMonth() + 1).padStart(2, '0');
+            var ano = data.getFullYear();
+            dataAtual = dia + '/' + mes + '/' + ano;
+            document.write(`<h1 class="text-success">Data Atual do sistema: ${dataAtual}</h1>`)
+            console.log(dataAtual);
+
+            /* Observação:
+            O padStart()método preenche a string atual com
+            outra string (várias vezes, se necessário) até
+            que a string resultante atinja o comprimento determinado.
+            O preenchimento é aplicado desde o início da string atual.
+            */
+
+        </script>
+
+    </main>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
