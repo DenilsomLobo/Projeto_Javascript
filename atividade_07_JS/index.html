@@ -13,21 +13,21 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/estilo.css">
 
-    <title>Tabelas em Bootstrap</title>
+    <title>Atividade - 07 - JS</title>
 </head>
 
 <body>
     <main id="container">
 
-            <nav class="p-3 mb-2 bg-dark text-white row">
-                <ul class="list-inline col-12">
-                    <li class="list-inline-item"><a href="index.html" class="text-decoration-none">Home</a></li>
-                    <li class="list-inline-item"><a href="http://denilsomlobo.epizy.com/"
-                            class="text-decoration-none">Mais paginas</a></li>
-                    <li class="list-inline-item"><a href="https://linkedin.com/in/denilsom-lobo-de-souza-2b6614230"
-                            class="text-decoration-none">Linkedin</a></li>
-                </ul>
-            </nav>
+        <nav class="p-3 mb-2 bg-dark text-white row">
+            <ul class="list-inline col-12">
+                <li class="list-inline-item"><a href="index.html" class="text-decoration-none">Home</a></li>
+                <li class="list-inline-item"><a href="http://denilsomlobo.epizy.com/" class="text-decoration-none">Mais
+                        paginas</a></li>
+                <li class="list-inline-item"><a href="https://linkedin.com/in/denilsom-lobo-de-souza-2b6614230"
+                        class="text-decoration-none">Linkedin</a></li>
+            </ul>
+        </nav>
 
         <header class="p-3 mb-2 bg-info text-light row">
             <h1 class="display-1 fw-bold col-12">JavaScript - Atividade 06 - Funções matemáticas</h1>
@@ -41,17 +41,25 @@
                 <li class="list-inline-item"><a href="#tb_4" class="text-decoration-none p-1">Math.sin() |</a></li>
                 <li class="list-inline-item"><a href="#tb_5" class="text-decoration-none p-1">Math.cos() |</a></li>
                 <li class="list-inline-item"><a href="#tb_6" class="text-decoration-none p-1">Math.tan() |</a></li>
+                <li class="list-inline-item"><a href="#tb_7" class="text-decoration-none p-1">Math.ceil() |</a></li>
+                <li class="list-inline-item"><a href="#tb_8" class="text-decoration-none p-1">Math.floor() |</a></li>
+                <li class="list-inline-item"><a href="#tb_9" class="text-decoration-none p-1">Math.round() |</a></li>
+                <li class="list-inline-item"><a href="#tb_10" class="text-decoration-none p-1">Math.random() |</a></li>
             </ul>
         </nav>
 
         <section>
             <articler class="row">
-                <a name="tb_1"><h3 class="p-3 mb-2 bg-primary text-light display-2 text-start float-sm-left col-12">Math.sqrt()</h3></a>
+                <a name="tb_1">
+                    <h3 class="p-3 mb-2 bg-primary text-light display-2 text-start float-sm-left col-12">Math.sqrt()
+                    </h3>
+                </a>
                 <h1 class="col-12">Resumo:</h1>
-                <p class="text-start col-12"><span class="bullet">•</span>A função Math.sqrt() retorna a raiz quadrada de um número √X</p>
+                <p class="text-start col-12"><span class="bullet">•</span>A função Math.sqrt() retorna a raiz quadrada
+                    de um número √X</p>
                 <h1 class="col-12">Sintaxe:</h1>
                 <p class="text-start col-12">Math.sqrt(x)</p>
-                <h1 class="col-12">Exemplo:</h1>               
+                <h1 class="col-12">Exemplo:</h1>
                 <script>
                     //Declaração:
                     raiz = Math.sqrt(9)
@@ -60,159 +68,409 @@
                     document.write(`<p class="col-12">A raiz quadrada de 9 = ${raiz}</p>`)
 
                 </script>
-                <a class="page-link col-1 mb-2" href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt"> Leia Mais ... <span>&raquo;</span></a>
-            </article>
-            <nav class="p-3 mb-2 bg-success text-white row">
-                <ul class="list-inline col-12">
-                    <li class="list-inline-item"><a href="#tb_1" class="text-decoration-none p-1">Math.sqrt() |</a></li>
-                    <li class="list-inline-item"><a href="#tb_2" class="text-decoration-none p-1">Math.pow() |</a></li>
-                    <li class="list-inline-item"><a href="#tb_3" class="text-decoration-none p-1">Math.trunc() |</a></li>
-                    <li class="list-inline-item"><a href="#tb_4" class="text-decoration-none p-1">Math.sin() |</a></li>
-                    <li class="list-inline-item"><a href="#tb_5" class="text-decoration-none p-1">Math.cos() |</a></li>
-                    <li class="list-inline-item"><a href="#tb_6" class="text-decoration-none p-1">Math.tan() |</a></li>
-                </ul>
-            </nav>
-
-            <articler class="row">
-                <a name="tb_1"><h3 class="p-3 mb-2 bg-primary text-light display-2 text-start float-sm-left col-12">Math.pow()</h3></a>
-                <h1 class="col-12">Resumo:</h1>
-                <p class="text-start col-12"><span class="bullet">•</span>A função Math.pow() retorna a base elevada ao expoente power, ou seja, base/expoente = 'a²'</p>
-                <h1 class="col-12">Sintaxe:</h1>
-                <p class="text-start col-12">Math.pow(base, expoente)</p>
-                <h1 class="col-12">Exemplo:</h1>
-                <script>
-                    //Declaração:
-                    potencia = Math.pow(9,2)
-
-                    //Saida:
-                    document.write(`<p class="col-12">A potência de 9 sobre 2 = ${potencia}</p>`)
-
-                </script>
-                <a class="page-link col-1 mb-2" href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/pow"> Leia Mais ... <span>&raquo;</span></a>
-            </article>
-            <nav class="p-3 mb-2 bg-success text-white row">
-                <ul class="list-inline col-12">
-                    <li class="list-inline-item"><a href="#tb_1" class="text-decoration-none p-1">Math.sqrt() |</a></li>
-                    <li class="list-inline-item"><a href="#tb_2" class="text-decoration-none p-1">Math.pow() |</a></li>
-                    <li class="list-inline-item"><a href="#tb_3" class="text-decoration-none p-1">Math.trunc() |</a></li>
-                    <li class="list-inline-item"><a href="#tb_4" class="text-decoration-none p-1">Math.sin() |</a></li>
-                    <li class="list-inline-item"><a href="#tb_5" class="text-decoration-none p-1">Math.cos() |</a></li>
-                    <li class="list-inline-item"><a href="#tb_6" class="text-decoration-none p-1">Math.tan() |</a></li>
-                </ul>
-            </nav>
-
-            <articler class="row">
-                <a name="tb_1"><h3 class="p-3 mb-2 bg-primary text-light display-2 text-start float-sm-left col-12">Math.trunc()</h3></a>
-                <h1 class="col-12">Resumo:</h1>
-                <p class="text-start col-12"><span class="bullet">•</span>O método Math.trunc() retorna a parte inteira de um número, descartando suas casas decimais.</p>
-                <h1 class="col-12">Sintaxe:</h1>
-                <p class="text-start col-12">Math.trunc(x)</p>
-                <h1 class="col-12">Exemplo:</h1>
-                <script>
-                    //Declaração:
-                    retorno = Math.trunc(9.32)
-
-                    //Saida:
-                    document.write(`<p class="col-12">O retorno de 9.32 inteiro descartando as suas casas decimais  = ${retorno}</p>`)
-
-                </script>
-                <a class="page-link col-1 mb-2" href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc"> Leia Mais ... <span>&raquo;</span></a>
-            </article>
-            <nav class="p-3 mb-2 bg-success text-white row">
-                <ul class="list-inline col-12">
-                    <li class="list-inline-item"><a href="#tb_1" class="text-decoration-none p-1">Math.sqrt() |</a></li>
-                    <li class="list-inline-item"><a href="#tb_2" class="text-decoration-none p-1">Math.pow() |</a></li>
-                    <li class="list-inline-item"><a href="#tb_3" class="text-decoration-none p-1">Math.trunc() |</a></li>
-                    <li class="list-inline-item"><a href="#tb_4" class="text-decoration-none p-1">Math.sin() |</a></li>
-                    <li class="list-inline-item"><a href="#tb_5" class="text-decoration-none p-1">Math.cos() |</a></li>
-                    <li class="list-inline-item"><a href="#tb_6" class="text-decoration-none p-1">Math.tan() |</a></li>
-                </ul>
-            </nav>
-
-            <articler class="row">
-                <a name="tb_1"><h3 class="p-3 mb-2 bg-primary text-light display-2 text-start float-sm-left col-12">Math.sin()</h3></a>
-                <h1 class="col-12">Resumo:</h1>
-                <p class="text-start col-12"><span class="bullet">•</span>A função Math.sin() retorna o seno de um número.</p>
-                <h1 class="col-12">Sintaxe:</h1>
-                <p class="text-start col-12">Math.sin(x)</p>
-                <h1 class="col-12">Exemplo:</h1>
-                <script>
-                    //Declaração:
-                    seno = Math.sin(9)
-
-                    //Saida:
-                    document.write(`<p class="col-12">O seno de 9 = ${seno}</p>`)
-
-                </script>
-                <a class="page-link col-1 mb-2" href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/sin"> Leia Mais ... <span>&raquo;</span></a>
-            </article>
-            <nav class="p-3 mb-2 bg-success text-white row">
-                <ul class="list-inline col-12">
-                    <li class="list-inline-item"><a href="#tb_1" class="text-decoration-none p-1">Math.sqrt() |</a></li>
-                    <li class="list-inline-item"><a href="#tb_2" class="text-decoration-none p-1">Math.pow() |</a></li>
-                    <li class="list-inline-item"><a href="#tb_3" class="text-decoration-none p-1">Math.trunc() |</a></li>
-                    <li class="list-inline-item"><a href="#tb_4" class="text-decoration-none p-1">Math.sin() |</a></li>
-                    <li class="list-inline-item"><a href="#tb_5" class="text-decoration-none p-1">Math.cos() |</a></li>
-                    <li class="list-inline-item"><a href="#tb_6" class="text-decoration-none p-1">Math.tan() |</a></li>
-                </ul>
-            </nav>
-
-            <articler class="row">
-                <a name="tb_1"><h3 class="p-3 mb-2 bg-primary text-light display-2 text-start float-sm-left col-12">Math.cos()</h3></a>
-                <h1 class="col-12">Resumo:</h1>
-                <p class="text-start col-12"><span class="bullet">•</span>A função Math.cos() ,que é estatica, retorna o cosseno de um ângulo, que deve estar em radianos. A expressão é 
-                    length adjacent / length hypotenuse.</p>
-                <h1 class="col-12">Sintaxe:</h1>
-                <p class="text-start col-12">Math.cos(x)</p>
-                <h1 class="col-12">Exemplo:</h1>
-                <script>
-                    //Declaração:
-                    cosseno = Math.cos(9)
-
-                    //Saida:
-                    document.write(`<p class="col-12">O cosseno de 9 = ${cosseno}</p>`)
-
-                </script>
-                <a class="page-link col-1 mb-2" href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/cos"> Leia Mais ... <span>&raquo;</span></a>
-            </article>
-            <nav class="p-3 mb-2 bg-success text-white row">
-                <ul class="list-inline col-12">
-                    <li class="list-inline-item"><a href="#tb_1" class="text-decoration-none p-1">Math.sqrt() |</a></li>
-                    <li class="list-inline-item"><a href="#tb_2" class="text-decoration-none p-1">Math.pow() |</a></li>
-                    <li class="list-inline-item"><a href="#tb_3" class="text-decoration-none p-1">Math.trunc() |</a></li>
-                    <li class="list-inline-item"><a href="#tb_4" class="text-decoration-none p-1">Math.sin() |</a></li>
-                    <li class="list-inline-item"><a href="#tb_5" class="text-decoration-none p-1">Math.cos() |</a></li>
-                    <li class="list-inline-item"><a href="#tb_6" class="text-decoration-none p-1">Math.tan() |</a></li>
-                </ul>
-            </nav>
-
-            <articler class="row">
-                <a name="tb_1"><h3 class="p-3 mb-2 bg-primary text-light display-2 text-start float-sm-left col-12">Math.tan()</h3></a>
-                <h1 class="col-12">Resumo:</h1>
-                <p class="text-start col-12"><span class="bullet">•</span>A função Math.tan() retorna a tangente de um número.</p>
-                <h1 class="col-12">Sintaxe:</h1>
-                <p class="text-start col-12">Math.tan(x)</p>
-                <h1 class="col-12">Exemplo:</h1>
-                <script>
-                    //Declaração:
-                    tangente = Math.tan(9)
-
-                    //Saida:
-                    document.write(`<p class="col-12">O tangente de 9 = ${tangente}</p>`)
-
-                </script>
-                <a class="page-link col-1 mb-2" href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/tan"> Leia Mais ... <span>&raquo;</span></a>
-            </article>
+                <a class="page-link col-1 mb-2"
+                    href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt">
+                    Leia Mais ... <span>&raquo;</span></a>
+                </article>
                 <nav class="p-3 mb-2 bg-success text-white row">
                     <ul class="list-inline col-12">
-                        <li class="list-inline-item"><a href="#tb_1" class="text-decoration-none p-1">Math.sqrt() |</a></li>
-                        <li class="list-inline-item"><a href="#tb_2" class="text-decoration-none p-1">Math.pow() |</a></li>
-                        <li class="list-inline-item"><a href="#tb_3" class="text-decoration-none p-1">Math.trunc() |</a></li>
-                        <li class="list-inline-item"><a href="#tb_4" class="text-decoration-none p-1">Math.sin() |</a></li>
-                        <li class="list-inline-item"><a href="#tb_5" class="text-decoration-none p-1">Math.cos() |</a></li>
-                        <li class="list-inline-item"><a href="#tb_6" class="text-decoration-none p-1">Math.tan() |</a></li>
+                        <li class="list-inline-item"><a href="#tb_1" class="text-decoration-none p-1">Math.sqrt() |</a>
+                        </li>
+                        <li class="list-inline-item"><a href="#tb_2" class="text-decoration-none p-1">Math.pow() |</a>
+                        </li>
+                        <li class="list-inline-item"><a href="#tb_3" class="text-decoration-none p-1">Math.trunc() |</a>
+                        </li>
+                        <li class="list-inline-item"><a href="#tb_4" class="text-decoration-none p-1">Math.sin() |</a>
+                        </li>
+                        <li class="list-inline-item"><a href="#tb_5" class="text-decoration-none p-1">Math.cos() |</a>
+                        </li>
+                        <li class="list-inline-item"><a href="#tb_6" class="text-decoration-none p-1">Math.tan() |</a>
+                        </li>
                     </ul>
                 </nav>
+
+                <articler class="row">
+                    <a name="tb_2">
+                        <h3 class="p-3 mb-2 bg-primary text-light display-2 text-start float-sm-left col-12">Math.pow()
+                        </h3>
+                    </a>
+                    <h1 class="col-12">Resumo:</h1>
+                    <p class="text-start col-12"><span class="bullet">•</span>A função Math.pow() retorna a base elevada
+                        ao expoente power, ou seja, base/expoente = 'a²'</p>
+                    <h1 class="col-12">Sintaxe:</h1>
+                    <p class="text-start col-12">Math.pow(base, expoente)</p>
+                    <h1 class="col-12">Exemplo:</h1>
+                    <script>
+                        //Declaração:
+                        potencia = Math.pow(9, 2)
+
+                        //Saida:
+                        document.write(`<p class="col-12">A potência de 9 sobre 2 = ${potencia}</p>`)
+
+                    </script>
+                    <a class="page-link col-1 mb-2"
+                        href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/pow">
+                        Leia Mais ... <span>&raquo;</span></a>
+                    </article>
+                    <nav class="p-3 mb-2 bg-success text-white row">
+                        <ul class="list-inline col-12">
+                            <li class="list-inline-item"><a href="#tb_1" class="text-decoration-none p-1">Math.sqrt()
+                                    |</a></li>
+                            <li class="list-inline-item"><a href="#tb_2" class="text-decoration-none p-1">Math.pow()
+                                    |</a></li>
+                            <li class="list-inline-item"><a href="#tb_3" class="text-decoration-none p-1">Math.trunc()
+                                    |</a></li>
+                            <li class="list-inline-item"><a href="#tb_4" class="text-decoration-none p-1">Math.sin()
+                                    |</a></li>
+                            <li class="list-inline-item"><a href="#tb_5" class="text-decoration-none p-1">Math.cos()
+                                    |</a></li>
+                            <li class="list-inline-item"><a href="#tb_6" class="text-decoration-none p-1">Math.tan()
+                                    |</a></li>
+                        </ul>
+                    </nav>
+
+                    <articler class="row">
+                        <a name="tb_3">
+                            <h3 class="p-3 mb-2 bg-primary text-light display-2 text-start float-sm-left col-12">
+                                Math.trunc()</h3>
+                        </a>
+                        <h1 class="col-12">Resumo:</h1>
+                        <p class="text-start col-12"><span class="bullet">•</span>O método Math.trunc() retorna a parte
+                            inteira de um número, descartando suas casas decimais.</p>
+                        <h1 class="col-12">Sintaxe:</h1>
+                        <p class="text-start col-12">Math.trunc(x)</p>
+                        <h1 class="col-12">Exemplo:</h1>
+                        <script>
+                            //Declaração:
+                            retorno = Math.trunc(9.32)
+
+                            //Saida:
+                            document.write(`<p class="col-12">O retorno de 9.32 inteiro descartando as suas casas decimais  = ${retorno}</p>`)
+
+                        </script>
+                        <a class="page-link col-1 mb-2"
+                            href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc">
+                            Leia Mais ... <span>&raquo;</span></a>
+                        </article>
+                        <nav class="p-3 mb-2 bg-success text-white row">
+                            <ul class="list-inline col-12">
+                                <li class="list-inline-item"><a href="#tb_1"
+                                        class="text-decoration-none p-1">Math.sqrt() |</a></li>
+                                <li class="list-inline-item"><a href="#tb_2" class="text-decoration-none p-1">Math.pow()
+                                        |</a></li>
+                                <li class="list-inline-item"><a href="#tb_3"
+                                        class="text-decoration-none p-1">Math.trunc() |</a></li>
+                                <li class="list-inline-item"><a href="#tb_4" class="text-decoration-none p-1">Math.sin()
+                                        |</a></li>
+                                <li class="list-inline-item"><a href="#tb_5" class="text-decoration-none p-1">Math.cos()
+                                        |</a></li>
+                                <li class="list-inline-item"><a href="#tb_6" class="text-decoration-none p-1">Math.tan()
+                                        |</a></li>
+                            </ul>
+                        </nav>
+
+                        <articler class="row">
+                            <a name="tb_4">
+                                <h3 class="p-3 mb-2 bg-primary text-light display-2 text-start float-sm-left col-12">
+                                    Math.sin()</h3>
+                            </a>
+                            <h1 class="col-12">Resumo:</h1>
+                            <p class="text-start col-12"><span class="bullet">•</span>A função Math.sin() retorna o seno
+                                de um número.</p>
+                            <h1 class="col-12">Sintaxe:</h1>
+                            <p class="text-start col-12">Math.sin(x)</p>
+                            <h1 class="col-12">Exemplo:</h1>
+                            <script>
+                                //Declaração:
+                                seno = Math.sin(9)
+
+                                //Saida:
+                                document.write(`<p class="col-12">O seno de 9 = ${seno}</p>`)
+
+                            </script>
+                            <a class="page-link col-1 mb-2"
+                                href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/sin">
+                                Leia Mais ... <span>&raquo;</span></a>
+                            </article>
+                            <nav class="p-3 mb-2 bg-success text-white row">
+                                <ul class="list-inline col-12">
+                                    <li class="list-inline-item"><a href="#tb_1"
+                                            class="text-decoration-none p-1">Math.sqrt() |</a></li>
+                                    <li class="list-inline-item"><a href="#tb_2"
+                                            class="text-decoration-none p-1">Math.pow() |</a></li>
+                                    <li class="list-inline-item"><a href="#tb_3"
+                                            class="text-decoration-none p-1">Math.trunc() |</a></li>
+                                    <li class="list-inline-item"><a href="#tb_4"
+                                            class="text-decoration-none p-1">Math.sin() |</a></li>
+                                    <li class="list-inline-item"><a href="#tb_5"
+                                            class="text-decoration-none p-1">Math.cos() |</a></li>
+                                    <li class="list-inline-item"><a href="#tb_6"
+                                            class="text-decoration-none p-1">Math.tan() |</a></li>
+                                </ul>
+                            </nav>
+
+                            <articler class="row">
+                                <a name="tb_5">
+                                    <h3
+                                        class="p-3 mb-2 bg-primary text-light display-2 text-start float-sm-left col-12">
+                                        Math.cos()</h3>
+                                </a>
+                                <h1 class="col-12">Resumo:</h1>
+                                <p class="text-start col-12"><span class="bullet">•</span>A função Math.cos() ,que é
+                                    estatica, retorna o cosseno de um ângulo, que deve estar em radianos. A expressão é
+                                    length adjacent / length hypotenuse.</p>
+                                <h1 class="col-12">Sintaxe:</h1>
+                                <p class="text-start col-12">Math.cos(x)</p>
+                                <h1 class="col-12">Exemplo:</h1>
+                                <script>
+                                    //Declaração:
+                                    cosseno = Math.cos(9)
+
+                                    //Saida:
+                                    document.write(`<p class="col-12">O cosseno de 9 = ${cosseno}</p>`)
+
+                                </script>
+                                <a class="page-link col-1 mb-2"
+                                    href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/cos">
+                                    Leia Mais ... <span>&raquo;</span></a>
+                                </article>
+                                <nav class="p-3 mb-2 bg-success text-white row">
+                                    <ul class="list-inline col-12">
+                                        <li class="list-inline-item"><a href="#tb_1"
+                                                class="text-decoration-none p-1">Math.sqrt() |</a></li>
+                                        <li class="list-inline-item"><a href="#tb_2"
+                                                class="text-decoration-none p-1">Math.pow() |</a></li>
+                                        <li class="list-inline-item"><a href="#tb_3"
+                                                class="text-decoration-none p-1">Math.trunc() |</a></li>
+                                        <li class="list-inline-item"><a href="#tb_4"
+                                                class="text-decoration-none p-1">Math.sin() |</a></li>
+                                        <li class="list-inline-item"><a href="#tb_5"
+                                                class="text-decoration-none p-1">Math.cos() |</a></li>
+                                        <li class="list-inline-item"><a href="#tb_6"
+                                                class="text-decoration-none p-1">Math.tan() |</a></li>
+                                    </ul>
+                                </nav>
+
+                                <articler class="row">
+                                    <a name="tb_6">
+                                        <h3
+                                            class="p-3 mb-2 bg-primary text-light display-2 text-start float-sm-left col-12">
+                                            Math.tan()</h3>
+                                    </a>
+                                    <h1 class="col-12">Resumo:</h1>
+                                    <p class="text-start col-12"><span class="bullet">•</span>A função Math.tan()
+                                        retorna a tangente de um número.</p>
+                                    <h1 class="col-12">Sintaxe:</h1>
+                                    <p class="text-start col-12">Math.tan(x)</p>
+                                    <h1 class="col-12">Exemplo:</h1>
+                                    <script>
+                                        //Declaração:
+                                        tangente = Math.tan(9)
+
+                                        //Saida:
+                                        document.write(`<p class="col-12">O tangente de 9 = ${tangente}</p>`)
+
+                                    </script>
+                                    <a class="page-link col-1 mb-2"
+                                        href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/tan">
+                                        Leia Mais ... <span>&raquo;</span></a>
+                                    </article>
+                                    <nav class="p-3 mb-2 bg-success text-white row">
+                                        <ul class="list-inline col-12">
+                                            <li class="list-inline-item"><a href="#tb_1"
+                                                    class="text-decoration-none p-1">Math.sqrt() |</a></li>
+                                            <li class="list-inline-item"><a href="#tb_2"
+                                                    class="text-decoration-none p-1">Math.pow() |</a></li>
+                                            <li class="list-inline-item"><a href="#tb_3"
+                                                    class="text-decoration-none p-1">Math.trunc() |</a></li>
+                                            <li class="list-inline-item"><a href="#tb_4"
+                                                    class="text-decoration-none p-1">Math.sin() |</a></li>
+                                            <li class="list-inline-item"><a href="#tb_5"
+                                                    class="text-decoration-none p-1">Math.cos() |</a></li>
+                                            <li class="list-inline-item"><a href="#tb_6"
+                                                    class="text-decoration-none p-1">Math.tan() |</a></li>
+                                        </ul>
+                                    </nav>
+                                    <articler class="row">
+                                        <a name="tb_7">
+                                            <h3
+                                                class="p-3 mb-2 bg-primary text-light display-2 text-start float-sm-left col-12">
+                                                Math.ceil()</h3>
+                                        </a>
+                                        <h1 class="col-12">Resumo:</h1>
+                                        <p class="text-start col-12"><span class="bullet">•</span>A função Math.ceil(x)
+                                            retorna o menor número inteiro maior ou igual a "x".</p>
+                                        <h1 class="col-12">Sintaxe:</h1>
+                                        <p class="text-start col-12">Math.ceil(x)</p>
+                                        <h1 class="col-12">Exemplo:</h1>
+                                        <script>
+                                            //Declaração:
+                                            maior = Math.ceil(9.95)
+
+                                            //Saida:
+                                            document.write(`<p class="col-12">O número maior inteiro de 9.95 = ${maior}</p>`)
+
+                                        </script>
+                                        <a class="page-link col-1 mb-2"
+                                            href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil">
+                                            Leia Mais ... <span>&raquo;</span></a>
+                                        </article>
+                                        <nav class="p-3 mb-2 bg-success text-white row">
+                                            <ul class="list-inline col-12">
+                                                <li class="list-inline-item"><a href="#tb_1"
+                                                        class="text-decoration-none p-1">Math.sqrt() |</a></li>
+                                                <li class="list-inline-item"><a href="#tb_2"
+                                                        class="text-decoration-none p-1">Math.pow() |</a></li>
+                                                <li class="list-inline-item"><a href="#tb_3"
+                                                        class="text-decoration-none p-1">Math.trunc() |</a></li>
+                                                <li class="list-inline-item"><a href="#tb_4"
+                                                        class="text-decoration-none p-1">Math.sin() |</a></li>
+                                                <li class="list-inline-item"><a href="#tb_5"
+                                                        class="text-decoration-none p-1">Math.cos() |</a></li>
+                                                <li class="list-inline-item"><a href="#tb_6"
+                                                        class="text-decoration-none p-1">Math.tan() |</a></li>
+                                            </ul>
+                                        </nav>
+
+                                        <articler class="row">
+                                            <a name="tb_8">
+                                                <h3
+                                                    class="p-3 mb-2 bg-primary text-light display-2 text-start float-sm-left col-12">
+                                                    Math.floor()</h3>
+                                            </a>
+                                            <h1 class="col-12">Resumo:</h1>
+                                            <p class="text-start col-12"><span class="bullet">•</span>A função
+                                                Math.floor(x) retorna o menor número inteiro dentre o número "x".</p>
+                                            <h1 class="col-12">Sintaxe:</h1>
+                                            <p class="text-start col-12">Math.floor(x)</p>
+                                            <h1 class="col-12">Exemplo:</h1>
+                                            <script>
+                                                //Declaração:
+                                                menor = Math.ceil(9.95)
+
+                                                //Saida:
+                                                document.write(`<p class="col-12">O menor número inteiro de 9.95 = ${menor}</p>`)
+
+                                            </script>
+                                            <a class="page-link col-1 mb-2"
+                                                href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil">
+                                                Leia Mais ... <span>&raquo;</span></a>
+                                            </article>
+                                            <nav class="p-3 mb-2 bg-success text-white row">
+                                                <ul class="list-inline col-12">
+                                                    <li class="list-inline-item"><a href="#tb_1"
+                                                            class="text-decoration-none p-1">Math.sqrt() |</a></li>
+                                                    <li class="list-inline-item"><a href="#tb_2"
+                                                            class="text-decoration-none p-1">Math.pow() |</a></li>
+                                                    <li class="list-inline-item"><a href="#tb_3"
+                                                            class="text-decoration-none p-1">Math.trunc() |</a></li>
+                                                    <li class="list-inline-item"><a href="#tb_4"
+                                                            class="text-decoration-none p-1">Math.sin() |</a></li>
+                                                    <li class="list-inline-item"><a href="#tb_5"
+                                                            class="text-decoration-none p-1">Math.cos() |</a></li>
+                                                    <li class="list-inline-item"><a href="#tb_6"
+                                                            class="text-decoration-none p-1">Math.tan() |</a></li>
+                                                </ul>
+                                            </nav>
+
+                                            <articler class="row">
+                                                <a name="tb_9">
+                                                    <h3
+                                                        class="p-3 mb-2 bg-primary text-light display-2 text-start float-sm-left col-12">
+                                                        Math.round()</h3>
+                                                </a>
+                                                <h1 class="col-12">Resumo:</h1>
+                                                <p class="text-start col-12"><span class="bullet">•</span>A função
+                                                    Math.round() retorna o valor de um número arredondado para o inteiro
+                                                    mais proximo.</p>
+                                                <h1 class="col-12">Sintaxe:</h1>
+                                                <p class="text-start col-12">Math.round(x) </p>
+                                                <h1 class="col-12">Exemplo:</h1>
+                                                <script>
+                                                    //Declaração:
+                                                    r1 = Math.round(9.49)
+                                                    r2 = Math.round(9.50)
+
+                                                    //Saida:
+                                                    document.write(`<p class="col-12">O retorno de 9.49 = ${r1}</p>`)
+                                                    document.write(`<p class="col-12">O retorno de 9.50 = ${r2}</p>`)
+
+                                                </script>
+                                                <a class="page-link col-1 mb-2"
+                                                    href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/round">
+                                                    Leia Mais ... <span>&raquo;</span></a>
+                                                </article>
+                                                <nav class="p-3 mb-2 bg-success text-white row">
+                                                    <ul class="list-inline col-12">
+                                                        <li class="list-inline-item"><a href="#tb_1"
+                                                                class="text-decoration-none p-1">Math.sqrt() |</a></li>
+                                                        <li class="list-inline-item"><a href="#tb_2"
+                                                                class="text-decoration-none p-1">Math.pow() |</a></li>
+                                                        <li class="list-inline-item"><a href="#tb_3"
+                                                                class="text-decoration-none p-1">Math.trunc() |</a></li>
+                                                        <li class="list-inline-item"><a href="#tb_4"
+                                                                class="text-decoration-none p-1">Math.sin() |</a></li>
+                                                        <li class="list-inline-item"><a href="#tb_5"
+                                                                class="text-decoration-none p-1">Math.cos() |</a></li>
+                                                        <li class="list-inline-item"><a href="#tb_6"
+                                                                class="text-decoration-none p-1">Math.tan() |</a></li>
+                                                    </ul>
+                                                </nav>
+
+                                                <articler class="row">
+                                                    <a name="tb_10">
+                                                        <h3
+                                                            class="p-3 mb-2 bg-primary text-light display-2 text-start float-sm-left col-12">
+                                                            Math.random()</h3>
+                                                    </a>
+                                                    <h1 class="col-12">Resumo:</h1>
+                                                    <p class="text-start col-12"><span class="bullet">•</span>A função
+                                                        Math.random() retorna um número pseudo-aleatório no intervalo
+                                                        [0, 1[, ou seja, de 0 (inclusivo) até, mas não incluindo, 1
+                                                        (exclusivo), que depois você pode dimensionar para um intervalo
+                                                        desejado. A implementação seleciona uma semente para o algoritmo
+                                                        de geração de números aleatórios; esta semente não pode ser
+                                                        escolhida ou reatribuída.</p>
+                                                    <h1 class="col-12">Sintaxe:</h1>
+                                                    <p class="text-start col-12">Math.random()</p>
+                                                    <h1 class="col-12">Exemplo:</h1>
+                                                    <script>
+                                                        //Declaração:
+                                                        function aleatorio() {
+                                                            return Math.random();
+                                                        }
+                                                        numero = aleatorio()
+
+                                                        //Saida:
+                                                        document.write(`<p class="col-12">O retorno de um numero aleatório = ${numero}</p>`)
+
+                                                    </script>
+                                                    <a class="page-link col-1 mb-2"
+                                                        href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil">
+                                                        Leia Mais ... <span>&raquo;</span></a>
+                                                    </article>
+                                                    <nav class="p-3 mb-2 bg-success text-white row">
+                                                        <ul class="list-inline col-12">
+                                                            <li class="list-inline-item"><a href="#tb_1"
+                                                                    class="text-decoration-none p-1">Math.sqrt() |</a>
+                                                            </li>
+                                                            <li class="list-inline-item"><a href="#tb_2"
+                                                                    class="text-decoration-none p-1">Math.pow() |</a>
+                                                            </li>
+                                                            <li class="list-inline-item"><a href="#tb_3"
+                                                                    class="text-decoration-none p-1">Math.trunc() |</a>
+                                                            </li>
+                                                            <li class="list-inline-item"><a href="#tb_4"
+                                                                    class="text-decoration-none p-1">Math.sin() |</a>
+                                                            </li>
+                                                            <li class="list-inline-item"><a href="#tb_5"
+                                                                    class="text-decoration-none p-1">Math.cos() |</a>
+                                                            </li>
+                                                            <li class="list-inline-item"><a href="#tb_6"
+                                                                    class="text-decoration-none p-1">Math.tan() |</a>
+                                                            </li>
+                                                        </ul>
+                                                    </nav>
 
         </section>
 
@@ -222,8 +480,9 @@
         <br>
 
         <footer class="p-1 mb-2 bg-dark text-start row">
-            
-            <p class="text-white col-12">Para mais conteudo: <br> <a href="http://denilsomlobo.epizy.com/">denilsomlobo.epizy.com</a> </p>
+
+            <p class="text-white col-12">Para mais conteudo: <br> <a
+                    href="http://denilsomlobo.epizy.com/">denilsomlobo.epizy.com</a> </p>
             <p class="text-white col-12">Menu da página:</p>
             <nav>
                 <ul class="list-inline col-12">
@@ -237,7 +496,8 @@
                 <ul class="list-inline col-12">
                     <li class="list-inline-item"><a href="#tb_1" class="text-decoration-none p-1">Math.sqrt() |</a></li>
                     <li class="list-inline-item"><a href="#tb_2" class="text-decoration-none p-1">Math.pow() |</a></li>
-                    <li class="list-inline-item"><a href="#tb_3" class="text-decoration-none p-1">Math.trunc() |</a></li>
+                    <li class="list-inline-item"><a href="#tb_3" class="text-decoration-none p-1">Math.trunc() |</a>
+                    </li>
                     <li class="list-inline-item"><a href="#tb_4" class="text-decoration-none p-1">Math.sin() |</a></li>
                     <li class="list-inline-item"><a href="#tb_5" class="text-decoration-none p-1">Math.cos() |</a></li>
                     <li class="list-inline-item"><a href="#tb_6" class="text-decoration-none p-1">Math.tan() |</a></li>
