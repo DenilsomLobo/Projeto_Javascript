@@ -11,20 +11,6 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <title>JavaScript</title>
-
-    <script>
-        //Eventos do teclado
-        function evento1() {
-            alert('Evento onkeydown disparado!')
-        }
-        function evento2() {
-            alert('Evento onkeyup disparado!')
-        }
-        function evento3() {
-            alert('Evento onkeypress disparado!')
-        }
-
-    </script>
 </head>
 
 <body>
@@ -32,25 +18,26 @@
     <main class="container">
 
         <header>
-            <h1 class="display-5 ps-4 pt-4">Estrutura de Controle: For</h1>
+            <h1 class="display-5 ps-4 pt-4">Eventos de Teclado</h1>
             <hr>
         </header>
 
-        <!--ONKEYDOWN: É acionado quando pressiono qualquer tecla-->
-        <!--ONKEYUP: É acionado quando uma tecla é liberada-->
-        <!--ONKEYPRESS: É acionado quando matenho a tecla pressionada (a tecla tem que ser um caractere)-->
+        <input onfocus="console.log('Acionou o Foco!')" onblur="console.log('Perdeu o Foco')" type="text" />
 
-        <input onkeydown="evento1()" type="text" class="bg-primary" />
-        <br>
-        <input onkeyup="evento2()" type="text" class="bg-success" />
-        <br>
-        <input onkeypress="evento3()" type="text" class="bg-warning" />
+        <!--ONCHANGE-->
+        <select onchange="console.log('Você esolheu alguma coisa!')">
+            <option>Escolha uma opção</option>
+            <option value="1">Opção 1</option>
+            <option value="2">Opção 2</option>
+            <option value="3">Opção 3</option>
+        </select>
 
         <!--
-            CONSULTAR A DOCUMENTO W3C PARA SE INFORMA DE TODOS
-            OS EVENTOS E SEUS RESPECTIVOS ELEMENTOS, POIS NEM TODO
-            ELEMENTO TEM SUPORTAR A UM EVENTO ESPECÍFICO.
+            CONSULTAR A DOCUMENTO W3C PARA SE INFORMAR DE TODOS
+            OS EVENTOS E SEUS RESPECTIVOS ELEMENTOS, POIS NEM TODO 
+            ELEMENTO TEM SUPORTE A UM EVENTO ESPECÍFICO.
         -->
+
     </main>
 
 
