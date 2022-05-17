@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Atividade 08</title>
+
+    <style>
+
+        p {
+            background: rgb(202, 202, 202);
+        }
+        
+        section {
+            background: rgb(73, 73, 252);
+        }
+
+        .valor {
+            background: rgb(41, 41, 41);
+        }
+    </style>
+
+    
+</head>
+
+<body>
+
+    <main class="container contorno">
+
+        <section class="row bg contorno">
+
+            <article class="col-3 p-2 bg contorno"></article>
+            <article class="col-6 p-2 bg contorno"></article>
+            <article class="col-3 p-2 bg contorno"></article>
+            <article class="col-3 p-2 bg contorno"></article>
+            <article class="col-4 p-2 bg contorno"><p id="tela"></p></article>
+            <article class="col-5 p-2 bg contorno"></article>
+            <article class="col-3 p-1 bg contorno"></article>
+            <article class="col-2 p-1 bg contorno"><button onclick="cancel()" id="cancel" class="bg-warning">C</button></article>
+            <article class="col-1 p-2 bg contorno"><button onclick="valor(`/`)" id="divisao" class="bg-info">/</button></article>
+            <article class="col-1 p-2 bg contorno"><button onclick="valor(`*`)" id="multiplicacao" class="bg-info">x</button></article>
+            <article class="col-5 p-1 bg contorno"></article>
+            <article class="col-3 p-1 bg contorno"></article>
+            <article class="col-1 p-2 bg contorno"><button onclick="valor(`7`)" class="valor">7</button></article>
+            <article class="col-1 p-2 bg contorno"><button onclick="valor(`8`)" class="valor">8</button></article>
+            <article class="col-1 p-2 bg contorno"><button onclick="valor(`9`)" class="valor">9</button></article>
+            <article class="col-1 p-2 bg contorno"><button onclick="valor(`-`)" class="bg-info">-</button></article>
+            <article class="col-5 p-2 bg contorno"></article>
+            <article class="col-3 p-2 bg contorno"></article>
+            <article class="col-1 p-2 bg contorno"><button onclick="valor(`4`)" class="valor">4</button></article>
+            <article class="col-1 p-2 bg contorno"><button onclick="valor(`5`)" class="valor">5</button></article>
+            <article class="col-1 p-2 bg contorno"><button onclick="valor(`6`)" class="valor">6</button></article>
+            <article class="col-1 p-2 bg contorno"><button onclick="valor(`+`)" class="bg-info">+</button></article>
+            <article class="col-5 p-2 bg contorno"></article>
+            <article class="col-3 p-2 bg contorno"></article>
+            <article class="col-1 p-2 bg contorno"><button onclick="valor(`1`)" class="valor">1</button></article>
+            <article class="col-1 p-2 bg contorno"><button onclick="valor(`2`)" class="valor">2</button></article>
+            <article class="col-1 p-2 bg contorno"><button onclick="valor(`3`)" class="valor">3</button></article>
+            <article class="col-1 p-4 bg contorno"><button onclick="calcular()" class="bg-success">=</button></article>
+            <article class="col-5 p-2 bg contorno"></article>
+            <article class="col-3 p-2 bg contorno"></article>
+            <article class="col-2 p-2 bg contorno"><button onclick="valor(`0`)" class="valor">0</button></article>
+            <article class="col-1 p-2 bg contorno"><button onclick="valor(`.`)" class="valor">.</button></article>
+            <article class="col-1 p-2 bg contorno"></article>
+            <article class="col-5 p-2 bg contorno"></article>
+
+
+        </section>
+
+        <script>
+
+            function valor(num) {
+                //Pega o botão que foi clicado e armazena na variável
+                var numero = document.getElementById('tela').innerHTML
+    
+                //Insere na tela um numero na frente do outro
+                document.getElementById('tela').innerHTML = numero + num
+            }
+    
+            function cancel() {
+                //limpar tudo que foi digitado
+                document.getElementById('tela').innerHTML = ''
+            }
+    
+            function calcular() {
+                //pega a expressão que está na tela e armazena na variável
+                let resultado = document.getElementById('tela').innerHTML
+    
+                //se tiver uma expressão na tela calcula a expressão
+                if (resultado) {
+                    document.getElementById('tela').innerHTML = eval(resultado)
+                }
+            }
+        </script>
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--Bootstrap NÃO APAGAR-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
