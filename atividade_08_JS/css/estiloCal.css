@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+button:hover{
+    background-color: rgb(147, 146, 146);
+}
+
+/*ID*/
+
+#resultado {
+    width: 230px;
+    height: 30px;
+    background-color: #F2F2F2;
+    margin: 5px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    font-size: 25px;
+    color: black;
+    text-align: right;
+    padding-right: 5px;
+    border-radius: 3px;
+    box-shadow: 2px 2px 3px #000;
+}
+
+/*Classes*/
+
+.fundo {
+    height: 100vh;
+    background-image: linear-gradient(45deg, black, crimson);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+}
+
+.calculadora {
+    position: absolute;
+    background-color: #025373;
+    top: 105%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 3px 3px 3px #000
+}
+
+/*Botões*/
+
+.botao {
+    width: 50px;
+    height: 50px;
+    margin: 3px;
+    border-radius: 3px;
+    font-size: 25px;
+    cursor: pointer;
+    background-color: black;
+    border: none;
+    color: #fff;
+    box-shadow: 2px 2px 3px #000
+}
+
+.botaoA {
+    width: 50px;
+    height: 50px;
+    margin: 3px;
+    border-radius: 3px;
+    font-size: 25px;
+    cursor: pointer;
+    background-color: #05DBF2;
+    border: none;
+    color: #000;
+    box-shadow: 2px 2px 3px #000
+}
+
+
+
+.botaoH {
+    width: 50px;
+    height: 106px;
+    margin: 3px;
+    border-radius: 3px;
+    font-size: 25px;
+    cursor: pointer;
+    background-color: #038C4C;
+    border: none;
+    color: #fff;
+    box-shadow: 2px 2px 3px #000
+}
+
+.botaoW {
+    width: 106px;
+    height: 50px;
+    margin: 3px;
+    border-radius: 3px;
+    font-size: 25px;
+    cursor: pointer;
+    background-color: black;
+    border: none;
+    color: #fff;
+    box-shadow: 2px 2px 3px #000
+}
+
+.botaoWc {
+    width: 106px;
+    height: 50px;
+    margin: 3px;
+    border-radius: 3px;
+    font-size: 25px;
+    cursor: pointer;
+    background-color: #F2B705;
+    border: none;
+    color: #000;
+    box-shadow: 2px 2px 3px #000
+}

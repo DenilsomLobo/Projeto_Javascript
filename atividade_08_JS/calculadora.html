@@ -11,14 +11,14 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <!--Css-->
-    <link rel="stylesheet" href="/atividade_08_Calculadora1/css/estilo.css">
+    <link rel="stylesheet" href="/atividade_08_JS/css/estiloCal.css">
+
 
     <title>Atividade 08 JavaScript</title>
 
 </head>
 
 <body>
-
     <main id="container">
 
         <nav class="p-3 mb-2 bg-dark  row text-center">
@@ -39,42 +39,106 @@
         <section>
             <articler class="row">
                 <h3 class="p-3 mb-2 bg-primary text-light display-2 text-start float-sm-left col-12">Atividade
-                    numero 2:</h3>
-                </article>
+                    numero 2: calculadora</h3>
 
-                <article class="container">
-                    <div id="calc" class="caixa">
-                        <div id="display" class="row m-1">0</div>
-                        <div id="botoes ">
-                        <div class="row m-2">
-                            <button class="btn btn-warning  m-1">C</button>
-                            <Button class="btn btn-info  m-1">/</Button>
-                            <button class="btn btn-info  m-1">X</button>
+                    <section class="fundo">
+                        <div class="calculadora">
+                            <p id="resultado"></p>
+                            <table>
+                                <tr>
+                                    <td colspan="2"><button class="botaoWc" onclick="apagar()">C</button></td>
+                                    <td><button class="botaoA" onclick="valor('/')">/</button></td>
+                                    <td><button class="botaoA" onclick="valor('X')">X</button></td>
+                                </tr>
+
+                                <tr>
+                                    <td><button class="botao" onclick="valor('7')">7</button></td>
+                                    <td><button class="botao" onclick="valor('8')">8</button></td>
+                                    <td><button class="botao" onclick="valor('9')">9</button></td>
+                                    <td><button class="botaoA" onclick="valor('-')">-</button></td>
+                                </tr>
+
+                                <tr>
+                                    <td><button class="botao" onclick="valor('4')">4</button></td>
+                                    <td><button class="botao" onclick="valor('5')">5</button></td>
+                                    <td><button class="botao" onclick="valor('6')">6</button></td>
+                                    <td><button class="botaoA" onclick="valor('+')">+</button></td>
+                                </tr>
+
+                                <tr>
+                                    <td><button class="botao" onclick="valor('1')">1</button></td>
+                                    <td><button class="botao" onclick="valor('2')">2</button></td>
+                                    <td><button class="botao" onclick="valor('3')">3</button></td>
+                                    <td rowspan="2"><button class="botaoH" onclick="calculo()">=</button></td>
+                                </tr>
+
+                                <tr>
+                                    <td colspan="2"><button class="botaoW" onclick="valor('0')">0</button></td>
+                                    <td><button class="botao" onclick="valor('.')">.</button></td>
+                                </tr>
+                            </table>
+
                         </div>
-                        <div class="row m-2">
-                            <button class="btn btn-dark  m-1">7</button>
-                            <Button class="btn btn-dark  m-1">8</Button>
-                            <button class="btn btn-dark  m-1">9</button>
-                            <button class="btn btn-info  m-1">-</button>
-                        </div>
-                        <div class="row m-2">
-                            <button class="btn btn-dark  m-1">4</button>
-                            <Button class="btn btn-dark  m-1">5</Button>
-                            <button class="btn btn-dark  m-1">6</button>
-                            <button class="btn btn-info  m-1">+</button>
-                        </div>
-                        <div class="row m-2">
-                            <button class="btn btn-dark  m-1">1</button>
-                            <Button class="btn btn-dark  m-1">2</Button>
-                            <button class="btn btn-dark  m-1">3</button>
-                            <button class="btn btn-success btn-result m-1 col ">=</button>
-                        </div>
-                        <div class="row m-2">
-                            <button class="btn btn-dark  m-1">0</button>
-                            <Button class="btn btn-dark  m-1">.</Button>
-                        </div>
-                        </div>
-                    </div>
+
+                        <script>
+                            function valor(numero) {
+                                var textNumero = document.getElementById('resultado').innerHTML
+                                document.getElementById('resultado').innerHTML = textNumero + numero
+                            }
+
+                            function apagar()
+                            {
+                                document.getElementById('resultado').innerHTML = '';
+                            }
+
+                            function calculo()
+                            {
+                                var resultado = document.getElementById('resultado').innerHTML;
+                                if(resultado)
+                                {
+                                    document.getElementById('resultado').innerHTML = eval(resultado)
+                                }
+                                else {
+                                    document.getElementById('resultado').innerHTML = "0"
+                                }
+                            }
+                        </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </section>
+
+
                 </article>
         </section>
 
@@ -101,10 +165,7 @@
             </nav>
             <h5 class="text-white text-end">Criado por Denilsom Lobo de Souza</h5>
         </footer>
-
-
-
-
+    
 
 
 
