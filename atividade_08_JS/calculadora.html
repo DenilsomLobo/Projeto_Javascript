@@ -43,7 +43,7 @@
 
                     <section class="fundo">
                         <div class="calculadora">
-                            <p id="resultado"></p>
+                            <input type="text" id="resultado" placeholder="0" disabled="disabled">
                             <table>
                                 <tr>
                                     <td colspan="2"><button class="botaoWc" onclick="apagar()">C</button></td>
@@ -82,24 +82,26 @@
 
                         <script>
                             function valor(numero) {
-                                var textNumero = document.getElementById('resultado').innerHTML
-                                document.getElementById('resultado').innerHTML = textNumero + numero
+                                var textNumero = document.getElementById('resultado').value
+                                console.log(document.getElementById('resultado').value = textNumero + numero)
                             }
+
+                           
 
                             function apagar()
                             {
-                                document.getElementById('resultado').innerHTML = '';
+                                document.getElementById('resultado').value = '';
                             }
 
                             function calculo()
                             {
-                                var resultado = document.getElementById('resultado').innerHTML;
+                                var resultado = document.getElementById('resultado').value;
                                 if(resultado)
                                 {
-                                    document.getElementById('resultado').innerHTML = eval(resultado)
+                                    document.getElementById('resultado').value = eval(resultado)
                                 }
                                 else {
-                                    document.getElementById('resultado').innerHTML = " "
+                                    document.getElementById('resultado').value = " "
                                 }
                             }
                         </script>

@@ -13,12 +13,6 @@
     <!--Css-->
     <link rel="stylesheet" href="/atividade_08_Calculadora1/css/estilo.css">
 
-    <style>
-        .linha {
-            border: 1px red solid;
-        }
-    </style>
-
     <title>Atividade 08 JavaScript</title>
 
 </head>
@@ -48,146 +42,204 @@
                     numero 4:</h3>
                 </article>
 
-                <article class="container linha">
+                <article class="container">
 
-                    <div class="row linha">
-                        <div class="col-4 linha">
+                    <div class="row">
+                        <div class="col-4">
                            
                         </div>
 
-                        <div class="col-4 mb-4 d-flex justify-content-center linha">
+                        <div class="col-4 mb-4 d-flex justify-content-center">
                             <h1>Bem vindos ao Jokenpô</h1>
                         </div>
 
-                        <div class="col-4 linha">
+                        <div class="col-4">
                            
                         </div>
                     </div>
 
-                    <div class="row linha">
-                        <div class="col-4 linha">
+                    <div class="row">
+                        <div class="col-4">
                             
                         </div>
 
-                        <div class="col-4 linha">
+                        <div class="col-4">
                             <h1>Escolha sua mão :</h1>
                         </div>
 
-                        <div class="col-4 linha">
+                        <div class="col-4">
                            
                         </div>
                     </div>
 
-                    <div class="row linha">
-                        <div class="col-3 linha">
+                    <div class="row">
+                        <div class="col-3">
                             <h3>Olá ! Eu sou a maquina e serei seu oponente !</h3>
                             <img class="p-2"  src="/atividade_08_JS/img/oponente.jpg" alt="">
                         </div>
 
-                        <div class="col-3 mt-4 p-2 linha">
-                            <button> <img src="/atividade_08_JS/img/pedra.png" alt=""></button>
+                        <div class="col-3 mt-4 p-2">
+                            <button onclick="ePedra()"> <img src="/atividade_08_JS/img/pedra.png" alt=""></button>
                         </div>
-                        <div class="col-3 mt-4 p-2 linha">
-                            <button> <img src="/atividade_08_JS/img/papel.png" alt=""></button>>
+                        <div class="col-3 mt-4 p-2">
+                            <button onclick="ePapel()"> <img src="/atividade_08_JS/img/papel.png" alt=""></button>
                         </div>
-                        <div class="col-3 mt-4 p-2 linha">
-                            <button> <img src="/atividade_08_JS/img/tesoura.png" alt=""></button>
+                        <div class="col-3 mt-4 p-2">
+                            <button onclick="eTesoura()"> <img src="/atividade_08_JS/img/tesoura.png" alt=""></button>
                         </div>
                     </div>
 
-
-                    <div class="row linha">
-                        <div class="col-4 linha">
+                    <div class="row">
+                        <div class="col-4">
                             
                         </div>
 
-                        <div class="col-4 d-flex justify-content-center linha">
+                        <div class="col-4 d-flex justify-content-center">
                             <h1>Batalha !!!</h1>
                         </div>
 
-                        <div class="col-4 linha">
+                        <div class="col-4">
                             
                         </div>
                     </div>
 
-                    <div class="row linha">
-                        <div class="col-5 d-flex justify-content-center linha">
+                    <div class="row">
+                        <div class="col-5 d-flex justify-content-center">
                             <h1>Sua mão:</h1>
                         </div>
-                        <div class="col-2 d-flex justify-content-center linha">
+                        <div class="col-2 d-flex justify-content-center">
                         </div>
-                        <div class="col-5 d-flex justify-content-center linha">
+                        <div class="col-5 d-flex justify-content-center">
                             <h1>Mão do oponente:</h1>
                         </div>
                     </div>
 
-                    <div class="row linha">
-                        <div class="col-5 d-flex justify-content-center linha">
-                            <picture><img src="/atividade_08_JS/img/quadro.png" alt=""></picture>
+                    <div class="row">
+                        <div class="col-5 d-flex justify-content-center">
+                            <picture><img id="suaM" src="/atividade_08_JS/img/quadro.png" alt=""></picture>
                         </div>
-                        <div class="col-2 d-flex justify-content-center linha">
+                        <div class="col-2 d-flex justify-content-center">
                             <img src="/atividade_08_JS/img/vs.png" alt="">
                         </div>
-                        <div class="col-5 d-flex justify-content-center linha">
-                            <picture><img src="/atividade_08_JS/img/quadro.png" alt=""></picture>
+                        <div class="col-5 d-flex justify-content-center">
+                            <picture><img id="mOp" src="/atividade_08_JS/img/quadro.png" alt=""></picture>
                         </div>
                     </div>
 
-                    <div class="row linha">
-                        <div class="col-4 linha">
+                    <div class="row">
+                        <div class="col-4">
                             
                         </div>
 
-                        <div class="col-4 d-flex justify-content-center linha">
+                        <div class="col-4 d-flex justify-content-center">
                             <h1>Resultado:</h1>
                         </div>
 
-                        <div class="col-4 linha">
+                        <div class="col-4">
                             
                         </div>
                     </div>
 
-                    <div class="row linha">
-                        <div class="col-4 linha">
+                    <div class="row">
+                        <div class="col-4">
                             
                         </div>
 
-                        <div class="col-4 d-flex justify-content-center linha">
-                            <h1>Vencedor</h1>
+                        <div class="col-4 d-flex justify-content-center">
+                            <h1 id="resultado"></h1>
                         </div>
 
-                        <div class="col-4 linha">
-                            
-                        </div>
-                    </div>
-
-                    <div class="row linha">
-                        <div class="col-4 linha">
-                            
-                        </div>
-
-                        <div class="col-4 d-flex justify-content-center linha">
-                            <picture><img src="/atividade_08_JS/img/quadro.png" alt=""></picture>
-                        </div>
-
-                        <div class="col-4 linha">
+                        <div class="col-4">
                             
                         </div>
                     </div>
 
-                    <div class="row linha">
-                        <div class="col-4 linha">
-                           
+                    <div class="row">
+                        <div class="col-4">
+                            
                         </div>
 
-                        <div class="col-4 m-3 p-3 d-flex justify-content-center linha">
-                            <button>Tentar novamente</button>
+                        <div class="col-4 d-flex justify-content-center">
+                            <picture><img id="imgResult" src="/atividade_08_JS/img/quadro.png" alt=""></picture>
                         </div>
 
-                        <div class="col-4 linha">
+                        <div class="col-4">
                             
                         </div>
                     </div>
+
+
+                    </div>
+
+                    <script>
+
+                        function ePedra()
+                        {
+                            document.getElementById('suaM').src ='/atividade_08_JS/img/pedra.png'
+                            let maquina = Math.floor((Math.random() * 3) + 1)
+                            console.log(maquina)
+                            if (maquina == 1){
+                                document.getElementById('mOp').src ='/atividade_08_JS/img/pedra.png'
+                                document.getElementById('resultado').innerHTML = 'Empate';
+                                document.getElementById('imgResult').src ='/atividade_08_JS/img/empate.png'
+                            }
+                            else if (maquina == 2) {
+                                document.getElementById('mOp').src="/atividade_08_JS/img/papel.png"
+                                document.getElementById('resultado').innerHTML = 'Perdeu';
+                                document.getElementById('imgResult').src ='/atividade_08_JS/img/vm.png'
+                            }
+                            else {
+                                document.getElementById('mOp').src ='/atividade_08_JS/img/tesoura.png'
+                                document.getElementById('resultado').innerHTML = 'Venceu';
+                                document.getElementById('imgResult').src ='/atividade_08_JS/img/vp.png'
+                            }
+                        }
+
+                        function ePapel()
+                        {
+                            document.getElementById('suaM').src="/atividade_08_JS/img/papel.png"
+                            let maquina = Math.floor((Math.random() * 3) + 1)
+                            console.log(maquina)
+                            if (maquina == 1){
+                                document.getElementById('mOp').src ='/atividade_08_JS/img/pedra.png'
+                                document.getElementById('resultado').innerHTML = 'Venceu';
+                                document.getElementById('imgResult').src ='/atividade_08_JS/img/vp.png'
+                            }
+                            else if (maquina == 2) {
+                                document.getElementById('mOp').src="/atividade_08_JS/img/papel.png"
+                                document.getElementById('resultado').innerHTML = 'Empate';
+                                document.getElementById('imgResult').src ='/atividade_08_JS/img/empate.png'
+                            }
+                            else {
+                                document.getElementById('mOp').src ='/atividade_08_JS/img/tesoura.png'
+                                document.getElementById('resultado').innerHTML = 'Perdeu';
+                                document.getElementById('imgResult').src ='/atividade_08_JS/img/vm.png'
+                            }
+                        }
+
+                        function eTesoura()
+                        {
+                            document.getElementById('suaM').src ='/atividade_08_JS/img/tesoura.png'
+                            let maquina = Math.floor((Math.random() * 3) + 1)
+                            console.log(maquina)
+                            if (maquina == 1){
+                                document.getElementById('mOp').src ='/atividade_08_JS/img/pedra.png'
+                                document.getElementById('resultado').innerHTML = 'Perdeu';
+                                document.getElementById('imgResult').src ='/atividade_08_JS/img/vm.png'
+                            }
+                            else if (maquina == 2) {
+                                document.getElementById('mOp').src="/atividade_08_JS/img/papel.png"
+                                document.getElementById('resultado').innerHTML = 'Venceu';
+                                document.getElementById('imgResult').src ='/atividade_08_JS/img/vp.png'
+                            }
+                            else {
+                                document.getElementById('mOp').src ='/atividade_08_JS/img/tesoura.png'
+                                document.getElementById('resultado').innerHTML = 'Empate';
+                                document.getElementById('imgResult').src ='/atividade_08_JS/img/empate.png'
+                            }
+                        }
+
+                    </script>
 
 
 
