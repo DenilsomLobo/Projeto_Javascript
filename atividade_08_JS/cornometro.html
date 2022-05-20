@@ -10,6 +10,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
+    <!--CSS-->
+    <link rel="stylesheet" href="/atividade_08_JS/css/estiloCor.css">
+
 
 
     <title>Atividade 08 JavaScript</title>
@@ -41,206 +44,74 @@
                     numero 4:</h3>
                 </article>
 
-                <article class="container">
+                <article class="containerC">
 
-                    <div class="row">
-                        <div class="col-4">
-                           
-                        </div>
+                    <section class="row ">
 
-                        <div class="col-4 mb-4 d-flex justify-content-center">
-                            <h1>Bem vindos ao Jokenpô</h1>
-                        </div>
-
-                        <div class="col-4">
-                           
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-4">
-                            
-                        </div>
-
-                        <div class="col-4">
-                            <h1>Escolha sua mão :</h1>
-                        </div>
-
-                        <div class="col-4">
-                           
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-3">
-                            <h3>Olá ! Eu sou a maquina e serei seu oponente !</h3>
-                            <img class="p-2"  src="/atividade_08_JS/img/oponente.jpg" alt="">
-                        </div>
-
-                        <div class="col-3 mt-4 p-2">
-                            <button onclick="ePedra()"> <img src="/atividade_08_JS/img/pedra.png" alt=""></button>
-                        </div>
-                        <div class="col-3 mt-4 p-2">
-                            <button onclick="ePapel()"> <img src="/atividade_08_JS/img/papel.png" alt=""></button>
-                        </div>
-                        <div class="col-3 mt-4 p-2">
-                            <button onclick="eTesoura()"> <img src="/atividade_08_JS/img/tesoura.png" alt=""></button>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-4">
-                            
-                        </div>
-
-                        <div class="col-4 d-flex justify-content-center">
-                            <h1>Batalha !!!</h1>
-                        </div>
-
-                        <div class="col-4">
-                            
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-5 d-flex justify-content-center">
-                            <h1>Sua mão:</h1>
-                        </div>
-                        <div class="col-2 d-flex justify-content-center">
-                        </div>
-                        <div class="col-5 d-flex justify-content-center">
-                            <h1>Mão do oponente:</h1>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-5 d-flex justify-content-center">
-                            <picture><img id="suaM" src="/atividade_08_JS/img/quadro.png" alt=""></picture>
-                        </div>
-                        <div class="col-2 d-flex justify-content-center">
-                            <img src="/atividade_08_JS/img/vs.png" alt="">
-                        </div>
-                        <div class="col-5 d-flex justify-content-center">
-                            <picture><img id="mOp" src="/atividade_08_JS/img/quadro.png" alt=""></picture>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-4">
-                            
-                        </div>
-
-                        <div class="col-4 d-flex justify-content-center">
-                            <h1>Resultado:</h1>
-                        </div>
-
-                        <div class="col-4">
-                            
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-4">
-                            
-                        </div>
-
-                        <div class="col-4 d-flex justify-content-center">
-                            <h1 id="resultado"></h1>
-                        </div>
-
-                        <div class="col-4">
-                            
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-4">
-                            
-                        </div>
-
-                        <div class="col-4 d-flex justify-content-center">
-                            <picture><img id="imgResult" src="/atividade_08_JS/img/quadro.png" alt=""></picture>
-                        </div>
-
-                        <div class="col-4">
-                            
-                        </div>
-                    </div>
+                        <div class="col-5 "></div>
+                        <h1 class="col-2 d-flex justify-content-center mb-4 mt-5 titulo">Cronometro</h1>
+                        <div class="col-5"></div>
 
 
-                    </div>
+                        <div class="col-5"></div>
+                            <div class="col-2 d-flex justify-content-center mb-4" id="display">
+                                <span id="horas">00</span>
+                                <span>: </span>
+                                <span id="minutos">00</span>
+                                <span>: </span>
+                                <span id="segundos">00</span>
+                            </div>
+                        <div class="col-5"></div>
+
+                        <div class="col-5"></div>
+                            <div class="col-2 d-flex justify-content-center mb-4 ">
+                                <button class="btn botao" onclick="play()">Iniciar</button>
+                                <button class="btn botao" onclick="pause()">Pausar</button>
+                                <button class="btn botao" onclick="reset()">Resetar</button>
+                            </div>
+                        <div class="col-5"></div>
+
+                    </section>
 
                     <script>
+                        let horas = 0
+                        let minutos = 0
+                        let segundos = 0
 
-                        function ePedra()
-                        {
-                            document.getElementById('suaM').src ='/atividade_08_JS/img/pedra.png'
-                            let maquina = Math.floor((Math.random() * 3) + 1)
-                            console.log(maquina)
-                            if (maquina == 1){
-                                document.getElementById('mOp').src ='/atividade_08_JS/img/pedra.png'
-                                document.getElementById('resultado').innerHTML = 'Empate';
-                                document.getElementById('imgResult').src ='/atividade_08_JS/img/empate.png'
-                            }
-                            else if (maquina == 2) {
-                                document.getElementById('mOp').src="/atividade_08_JS/img/papel.png"
-                                document.getElementById('resultado').innerHTML = 'Perdeu';
-                                document.getElementById('imgResult').src ='/atividade_08_JS/img/vm.png'
-                            }
-                            else {
-                                document.getElementById('mOp').src ='/atividade_08_JS/img/tesoura.png'
-                                document.getElementById('resultado').innerHTML = 'Venceu';
-                                document.getElementById('imgResult').src ='/atividade_08_JS/img/vp.png'
-                            }
+                        function play() {
+                            i = setInterval(contador, 100)
                         }
 
-                        function ePapel()
-                        {
-                            document.getElementById('suaM').src="/atividade_08_JS/img/papel.png"
-                            let maquina = Math.floor((Math.random() * 3) + 1)
-                            console.log(maquina)
-                            if (maquina == 1){
-                                document.getElementById('mOp').src ='/atividade_08_JS/img/pedra.png'
-                                document.getElementById('resultado').innerHTML = 'Venceu';
-                                document.getElementById('imgResult').src ='/atividade_08_JS/img/vp.png'
-                            }
-                            else if (maquina == 2) {
-                                document.getElementById('mOp').src="/atividade_08_JS/img/papel.png"
-                                document.getElementById('resultado').innerHTML = 'Empate';
-                                document.getElementById('imgResult').src ='/atividade_08_JS/img/empate.png'
-                            }
-                            else {
-                                document.getElementById('mOp').src ='/atividade_08_JS/img/tesoura.png'
-                                document.getElementById('resultado').innerHTML = 'Perdeu';
-                                document.getElementById('imgResult').src ='/atividade_08_JS/img/vm.png'
-                            }
+                        function pause() {
+                            clearInterval(i)
                         }
 
-                        function eTesoura()
-                        {
-                            document.getElementById('suaM').src ='/atividade_08_JS/img/tesoura.png'
-                            let maquina = Math.floor((Math.random() * 3) + 1)
-                            console.log(maquina)
-                            if (maquina == 1){
-                                document.getElementById('mOp').src ='/atividade_08_JS/img/pedra.png'
-                                document.getElementById('resultado').innerHTML = 'Perdeu';
-                                document.getElementById('imgResult').src ='/atividade_08_JS/img/vm.png'
-                            }
-                            else if (maquina == 2) {
-                                document.getElementById('mOp').src="/atividade_08_JS/img/papel.png"
-                                document.getElementById('resultado').innerHTML = 'Venceu';
-                                document.getElementById('imgResult').src ='/atividade_08_JS/img/vp.png'
-                            }
-                            else {
-                                document.getElementById('mOp').src ='/atividade_08_JS/img/tesoura.png'
-                                document.getElementById('resultado').innerHTML = 'Empate';
-                                document.getElementById('imgResult').src ='/atividade_08_JS/img/empate.png'
-                            }
+                        function reset() {
+                            horas = 0
+                            minutos = 0
+                            segundos = 0
+                            document.getElementById('segundos').innerHTML = '0' + segundos
+                            document.getElementById('minutos').innerHTML = '0' + minutos
+                            document.getElementById('horas').innerHTML = '0' + horas
                         }
 
+                        function contador() {
+                            segundos++
+                            if (segundos == 60) {
+                                segundos = 0
+                                minutos++
+                            } else if (minutos == 60) {
+                                minutos = 0
+                                horas++
+                            }
+
+
+                            document.getElementById('segundos').innerHTML = segundos
+                            document.getElementById('minutos').innerHTML = minutos
+                            document.getElementById('horas').innerHTML = horas
+
+                        }
                     </script>
-
-
 
                 </article>
 

@@ -37,7 +37,7 @@ button:hover{
 .calculadora {
     position: absolute;
     background-color: #025373;
-    top: 105%;
+    top: 115%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 15px;
