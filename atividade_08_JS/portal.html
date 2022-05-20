@@ -1,0 +1,620 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!--Css-->
+    <link rel="stylesheet" href="/atividade_08_JS/css/estiloPort.css">
+
+    <title>Atividade 08 JavaScript</title>
+
+</head>
+
+<body>
+
+    <main id="container">
+
+        <nav class="p-3 mb-2 bg-dark  row text-center">
+            <ul class="list-inline col-12">
+                <li class="list-inline-item"><a href="index.html"
+                        class="text-decoration-none text-white display-6 p-3">Home</a></li>
+                <li class="list-inline-item"><a href="index.html"
+                        class="text-decoration-none text-white display-6 p-3">Mais paginas</a></li>
+                <li class="list-inline-item"><a href="https://linkedin.com/in/denilsom-lobo-de-souza-2b6614230"
+                        class="text-decoration-none text-white display-6 p-3">Linkedin</a></li>
+            </ul>
+        </nav>
+
+        <header class="p-3 mb-2 bg-info text-light row">
+            <h1 class="display-1 fw-bold col-12">JavaScript - Atividade 08 </h1>
+        </header>
+
+        <section>
+            <articler class="row">
+                <h3 class="p-3 mb-2 bg-primary text-light display-2 text-start float-sm-left col-12">Atividade
+                    numero 4:</h3>
+                </article>
+
+                <article class="container">
+
+                    <div class="row">
+                        <div class="col-4">
+                           
+                        </div>
+
+                        <div class="col-4 mb-4 d-flex justify-content-center">
+                            <h1>Portal matemático</h1>
+                        </div>
+
+                        <div class="col-4">
+                           
+                        </div>
+                    </div>
+
+                    <nav class="p-3 mb-2  text-white row">
+                        <ul class="list-inline d-flex justify-content-center col-12">
+                            <li class="list-inline-item"><a href="lcal" class="text-decoration-none p-1">Calculadora |</a></li>
+                            <li class="list-inline-item"><a href="#tb_2" class="text-decoration-none p-1">Math.pow() |</a></li>
+                            <li class="list-inline-item"><a href="#tb_3" class="text-decoration-none p-1">Math.trunc() |</a></li>
+                            <li class="list-inline-item"><a href="#tb_4" class="text-decoration-none p-1">Math.sin() |</a></li>
+                            <li class="list-inline-item"><a href="#tb_5" class="text-decoration-none p-1">Math.cos() |</a></li>
+                            <li class="list-inline-item"><a href="#tb_6" class="text-decoration-none p-1">Math.tan() |</a></li>
+                            <li class="list-inline-item"><a href="#tb_7" class="text-decoration-none p-1">Math.ceil() |</a></li>
+                            <li class="list-inline-item"><a href="#tb_8" class="text-decoration-none p-1">Math.floor() |</a></li>
+                            <li class="list-inline-item"><a href="#tb_9" class="text-decoration-none p-1">Math.round() |</a></li>
+                            <li class="list-inline-item"><a href="#tb_10" class="text-decoration-none p-1">Math.random() |</a></li>
+                        </ul>
+                    </nav>
+
+        
+
+                    <div class="row">
+                        <div class="col-4">
+                            <a href="lcal"></a><h1>Calculadora:</h1></a>
+                        </div>
+
+                        <div class="col-4">
+                            
+                        </div>
+
+                        <div class="col-4">
+                           
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <section class="fundo">
+                            <div class="calculadora">
+                                <input type="text" id="resultado" placeholder="0" disabled="disabled">
+                                <table>
+                                    <tr>
+                                        <td colspan="2"><button class="botaoWc" onclick="apagar()">C</button></td>
+                                        <td><button class="botaoA" onclick="valor('/')">/</button></td>
+                                        <td><button class="botaoA" onclick="valor('X')">X</button></td>
+                                    </tr>
+    
+                                    <tr>
+                                        <td><button class="botao" onclick="valor('7')">7</button></td>
+                                        <td><button class="botao" onclick="valor('8')">8</button></td>
+                                        <td><button class="botao" onclick="valor('9')">9</button></td>
+                                        <td><button class="botaoA" onclick="valor('-')">-</button></td>
+                                    </tr>
+    
+                                    <tr>
+                                        <td><button class="botao" onclick="valor('4')">4</button></td>
+                                        <td><button class="botao" onclick="valor('5')">5</button></td>
+                                        <td><button class="botao" onclick="valor('6')">6</button></td>
+                                        <td><button class="botaoA" onclick="valor('+')">+</button></td>
+                                    </tr>
+    
+                                    <tr>
+                                        <td><button class="botao" onclick="valor('1')">1</button></td>
+                                        <td><button class="botao" onclick="valor('2')">2</button></td>
+                                        <td><button class="botao" onclick="valor('3')">3</button></td>
+                                        <td rowspan="2"><button class="botaoH" onclick="calculo()">=</button></td>
+                                    </tr>
+    
+                                    <tr>
+                                        <td colspan="2"><button class="botaoW" onclick="valor('0')">0</button></td>
+                                        <td><button class="botao" onclick="valor('.')">.</button></td>
+                                    </tr>
+                                </table>
+    
+                            </div>
+    
+                            <script>
+                                function valor(numero) {
+                                    var textNumero = document.getElementById('resultado').value
+                                    console.log(document.getElementById('resultado').value = textNumero + numero)
+                                }
+    
+                               
+    
+                                function apagar()
+                                {
+                                    document.getElementById('resultado').value = '';
+                                }
+    
+                                function calculo()
+                                {
+                                    var resultado = document.getElementById('resultado').value;
+                                    if(resultado)
+                                    {
+                                        document.getElementById('resultado').value = eval(resultado)
+                                    }
+                                    else {
+                                        document.getElementById('resultado').value = " "
+                                    }
+                                }
+                            </script>
+    
+                        </section>
+                    </div>
+
+                    <nav class="p-3 mb-2  text-white row">
+                        <ul class="list-inline d-flex justify-content-center col-12">
+                            <li class="list-inline-item"><a href="lcal" class="text-decoration-none p-1">Calculadora |</a></li>
+                            <li class="list-inline-item"><a href="#tb_2" class="text-decoration-none p-1">Math.pow() |</a></li>
+                            <li class="list-inline-item"><a href="#tb_3" class="text-decoration-none p-1">Math.trunc() |</a></li>
+                            <li class="list-inline-item"><a href="#tb_4" class="text-decoration-none p-1">Math.sin() |</a></li>
+                            <li class="list-inline-item"><a href="#tb_5" class="text-decoration-none p-1">Math.cos() |</a></li>
+                            <li class="list-inline-item"><a href="#tb_6" class="text-decoration-none p-1">Math.tan() |</a></li>
+                            <li class="list-inline-item"><a href="#tb_7" class="text-decoration-none p-1">Math.ceil() |</a></li>
+                            <li class="list-inline-item"><a href="#tb_8" class="text-decoration-none p-1">Math.floor() |</a></li>
+                            <li class="list-inline-item"><a href="#tb_9" class="text-decoration-none p-1">Math.round() |</a></li>
+                            <li class="list-inline-item"><a href="#tb_10" class="text-decoration-none p-1">Math.random() |</a></li>
+                        </ul>
+                    </nav>
+
+                    <div class="row">
+                        <div class="col-4">
+                            <h1>Calculadora Equação do 2º grau:</h1>
+                        </div>
+
+                        <div class="col-4">
+                        </div>
+
+                        <div class="col-4">
+                            
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <section class="fundo">
+
+                            <div class="row">
+                                <div class="col-4">
+                                   
+                                </div>
+        
+                                <div class="col-4 mb-4 d-flex justify-content-center">
+                                    <h1>Insira os valores</h1>
+                                </div>
+        
+                                <div class="col-4">
+                                   
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-4">
+                                    <h1>Coeficiente A:</h1>
+                                    <input id="num1" type="number">
+                                </div>
+        
+                                <div class="col-4">
+
+                                    <h1>Coeficiente B:</h1>
+                                    <input id="num2" type="number">
+                                    
+                                </div>
+                                
+                                <div class="col-4">
+
+                                    <h1>Coeficiente C:</h1>
+                                    <input id="num3" type="number">
+                                    
+                                </div>
+
+
+                            </div>
+
+                            <br><br><br><br>
+
+                            <div class="row">
+                                <div class="col-4">
+                                    
+                                </div>
+        
+                                <div class="col-4 d-flex justify-content-center">
+                                    <button onclick="raiz()">Calcular raízes</button>
+                                </div>
+        
+                                <div class="col-4">
+                                    
+                                </div>
+                            </div>
+
+                            <br><br><br><br>
+
+                            <div class="row">
+                                <div class="col-4">
+                                    
+                                </div>
+        
+                                <div class="col-4 d-flex justify-content-center">
+                                    <p id='resposta'></p>
+                                </div>
+        
+                                <div class="col-4">
+                                    
+                                </div>
+                            </div>
+
+                            <script type="text/javascript">
+                                function raiz(){
+                                  var a = parseFloat(document.getElementById("num1").value);
+                                  var b = parseFloat(document.getElementById("num2").value);
+                                  var c = parseFloat(document.getElementById("num3").value);
+                                  ans = document.getElementById('resposta');
+                           
+                                  var delta = (b*b) - 4*a*c;
+                           
+                                  if (delta>0){
+                                   raiz1 = (-b + Math.sqrt(delta) )/(2*a);
+                                   raiz2 = (-b - Math.sqrt(delta) )/(2*a);
+                           
+                                   ans.innerHTML = "Raiz 1: " + raiz1 + "<br/>" +"Raiz 2: " + raiz2;
+                                  }else{
+                                   if (delta==0){
+                                    raiz = (-b + Math.sqrt(delta) )/(2*a);
+                                    ans.innerHTML="Raiz dupla: " + raiz;
+                                   }else{
+                                    real = (-b)/(2*a);
+                                    img1  = Math.sqrt(-delta)/(2*a);
+                                    img2  = - Math.sqrt(-delta)/(2*a);
+                           
+                                    ans.innerHTML = "Raiz 1: " + real + "+" + img1+"i"+"<br/>" +
+                                        "Raiz 2: " + real + "+" + img2+"i"
+                                   }
+                                  }
+                                }
+                               </script>
+                        </section>
+                        <nav class="p-3 mb-2  text-white row">
+                            <ul class="list-inline d-flex justify-content-center col-12">
+                                <li class="list-inline-item"><a href="lcal" class="text-decoration-none p-1">Calculadora |</a></li>
+                                <li class="list-inline-item"><a href="#tb_2" class="text-decoration-none p-1">Math.pow() |</a></li>
+                                <li class="list-inline-item"><a href="#tb_3" class="text-decoration-none p-1">Math.trunc() |</a></li>
+                                <li class="list-inline-item"><a href="#tb_4" class="text-decoration-none p-1">Math.sin() |</a></li>
+                                <li class="list-inline-item"><a href="#tb_5" class="text-decoration-none p-1">Math.cos() |</a></li>
+                                <li class="list-inline-item"><a href="#tb_6" class="text-decoration-none p-1">Math.tan() |</a></li>
+                                <li class="list-inline-item"><a href="#tb_7" class="text-decoration-none p-1">Math.ceil() |</a></li>
+                                <li class="list-inline-item"><a href="#tb_8" class="text-decoration-none p-1">Math.floor() |</a></li>
+                                <li class="list-inline-item"><a href="#tb_9" class="text-decoration-none p-1">Math.round() |</a></li>
+                                <li class="list-inline-item"><a href="#tb_10" class="text-decoration-none p-1">Math.random() |</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-4">
+                            <h1>Fatorial:</h1>
+                        </div>
+
+                        <div class="col-4">
+                        </div>
+
+                        <div class="col-4">
+                            
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <section class="fundo">
+
+                            <div class="row">
+                                <div class="col-4">
+                                   
+                                </div>
+        
+                                <div class="col-4 mb-4 d-flex justify-content-center">
+                                    <h1>Insira os valores</h1>
+                                </div>
+        
+                                <div class="col-4">
+                                   
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-4">
+                                    <h1>Coeficiente A:</h1>
+                                    <input id="num1" type="number">
+                                </div>
+        
+                                <div class="col-4">
+
+                                    <h1>Coeficiente B:</h1>
+                                    <input id="num2" type="number">
+                                    
+                                </div>
+                                
+                                <div class="col-4">
+
+                                    <h1>Coeficiente C:</h1>
+                                    <input id="num3" type="number">
+                                    
+                                </div>
+
+
+                            </div>
+
+                            <br><br><br><br>
+
+                            <div class="row">
+                                <div class="col-4">
+                                    
+                                </div>
+        
+                                <div class="col-4 d-flex justify-content-center">
+                                    <button onclick="raiz()">Calcular raízes</button>
+                                </div>
+        
+                                <div class="col-4">
+                                    
+                                </div>
+                            </div>
+
+                            <br><br><br><br>
+
+                            <div class="row">
+                                <div class="col-4">
+                                    
+                                </div>
+        
+                                <div class="col-4 d-flex justify-content-center">
+                                    <p id='resposta'></p>
+                                </div>
+        
+                                <div class="col-4">
+                                    
+                                </div>
+                            </div>
+
+                            <script type="text/javascript">
+                                function raiz(){
+                                  var a = parseFloat(document.getElementById("num1").value);
+                                  var b = parseFloat(document.getElementById("num2").value);
+                                  var c = parseFloat(document.getElementById("num3").value);
+                                  ans = document.getElementById('resposta');
+                           
+                                  var delta = (b*b) - 4*a*c;
+                           
+                                  if (delta>0){
+                                   raiz1 = (-b + Math.sqrt(delta) )/(2*a);
+                                   raiz2 = (-b - Math.sqrt(delta) )/(2*a);
+                           
+                                   ans.innerHTML = "Raiz 1: " + raiz1 + "<br/>" +"Raiz 2: " + raiz2;
+                                  }else{
+                                   if (delta==0){
+                                    raiz = (-b + Math.sqrt(delta) )/(2*a);
+                                    ans.innerHTML="Raiz dupla: " + raiz;
+                                   }else{
+                                    real = (-b)/(2*a);
+                                    img1  = Math.sqrt(-delta)/(2*a);
+                                    img2  = - Math.sqrt(-delta)/(2*a);
+                           
+                                    ans.innerHTML = "Raiz 1: " + real + "+" + img1+"i"+"<br/>" +
+                                        "Raiz 2: " + real + "+" + img2+"i"
+                                   }
+                                  }
+                                }
+                               </script>
+                        </section>
+                        <nav class="p-3 mb-2  text-white row">
+                            <ul class="list-inline d-flex justify-content-center col-12">
+                                <li class="list-inline-item"><a href="lcal" class="text-decoration-none p-1">Calculadora |</a></li>
+                                <li class="list-inline-item"><a href="#tb_2" class="text-decoration-none p-1">Math.pow() |</a></li>
+                                <li class="list-inline-item"><a href="#tb_3" class="text-decoration-none p-1">Math.trunc() |</a></li>
+                                <li class="list-inline-item"><a href="#tb_4" class="text-decoration-none p-1">Math.sin() |</a></li>
+                                <li class="list-inline-item"><a href="#tb_5" class="text-decoration-none p-1">Math.cos() |</a></li>
+                                <li class="list-inline-item"><a href="#tb_6" class="text-decoration-none p-1">Math.tan() |</a></li>
+                                <li class="list-inline-item"><a href="#tb_7" class="text-decoration-none p-1">Math.ceil() |</a></li>
+                                <li class="list-inline-item"><a href="#tb_8" class="text-decoration-none p-1">Math.floor() |</a></li>
+                                <li class="list-inline-item"><a href="#tb_9" class="text-decoration-none p-1">Math.round() |</a></li>
+                                <li class="list-inline-item"><a href="#tb_10" class="text-decoration-none p-1">Math.random() |</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-4">
+                            <h1>Cálculo trigonométrico:</h1>
+                        </div>
+
+                        <div class="col-4">
+                        </div>
+
+                        <div class="col-4">
+                            
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <section class="fundo">
+
+                            <div class="row">
+                                <div class="col-4">
+                                   
+                                </div>
+        
+                                <div class="col-4 mb-4 d-flex justify-content-center">
+                                    <h1>Insira os valores</h1>
+                                </div>
+        
+                                <div class="col-4">
+                                   
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-4">
+                                    <h1>Coeficiente A:</h1>
+                                    <input id="num1" type="number">
+                                </div>
+        
+                                <div class="col-4">
+
+                                    <h1>Coeficiente B:</h1>
+                                    <input id="num2" type="number">
+                                    
+                                </div>
+                                
+                                <div class="col-4">
+
+                                    <h1>Coeficiente C:</h1>
+                                    <input id="num3" type="number">
+                                    
+                                </div>
+
+
+                            </div>
+
+                            <br><br><br><br>
+
+                            <div class="row">
+                                <div class="col-4">
+                                    
+                                </div>
+        
+                                <div class="col-4 d-flex justify-content-center">
+                                    <button onclick="raiz()">Calcular raízes</button>
+                                </div>
+        
+                                <div class="col-4">
+                                    
+                                </div>
+                            </div>
+
+                            <br><br><br><br>
+
+                            <div class="row">
+                                <div class="col-4">
+                                    
+                                </div>
+        
+                                <div class="col-4 d-flex justify-content-center">
+                                    <p id='resposta'></p>
+                                </div>
+        
+                                <div class="col-4">
+                                    
+                                </div>
+                            </div>
+
+                            <script type="text/javascript">
+                                function raiz(){
+                                  var a = parseFloat(document.getElementById("num1").value);
+                                  var b = parseFloat(document.getElementById("num2").value);
+                                  var c = parseFloat(document.getElementById("num3").value);
+                                  ans = document.getElementById('resposta');
+                           
+                                  var delta = (b*b) - 4*a*c;
+                           
+                                  if (delta>0){
+                                   raiz1 = (-b + Math.sqrt(delta) )/(2*a);
+                                   raiz2 = (-b - Math.sqrt(delta) )/(2*a);
+                           
+                                   ans.innerHTML = "Raiz 1: " + raiz1 + "<br/>" +"Raiz 2: " + raiz2;
+                                  }else{
+                                   if (delta==0){
+                                    raiz = (-b + Math.sqrt(delta) )/(2*a);
+                                    ans.innerHTML="Raiz dupla: " + raiz;
+                                   }else{
+                                    real = (-b)/(2*a);
+                                    img1  = Math.sqrt(-delta)/(2*a);
+                                    img2  = - Math.sqrt(-delta)/(2*a);
+                           
+                                    ans.innerHTML = "Raiz 1: " + real + "+" + img1+"i"+"<br/>" +
+                                        "Raiz 2: " + real + "+" + img2+"i"
+                                   }
+                                  }
+                                }
+                               </script>
+                        </section>
+                        <nav class="p-3 mb-2  text-white row">
+                            <ul class="list-inline d-flex justify-content-center col-12">
+                                <li class="list-inline-item"><a href="lcal" class="text-decoration-none p-1">Calculadora |</a></li>
+                                <li class="list-inline-item"><a href="#tb_2" class="text-decoration-none p-1">Math.pow() |</a></li>
+                                <li class="list-inline-item"><a href="#tb_3" class="text-decoration-none p-1">Math.trunc() |</a></li>
+                                <li class="list-inline-item"><a href="#tb_4" class="text-decoration-none p-1">Math.sin() |</a></li>
+                                <li class="list-inline-item"><a href="#tb_5" class="text-decoration-none p-1">Math.cos() |</a></li>
+                                <li class="list-inline-item"><a href="#tb_6" class="text-decoration-none p-1">Math.tan() |</a></li>
+                                <li class="list-inline-item"><a href="#tb_7" class="text-decoration-none p-1">Math.ceil() |</a></li>
+                                <li class="list-inline-item"><a href="#tb_8" class="text-decoration-none p-1">Math.floor() |</a></li>
+                                <li class="list-inline-item"><a href="#tb_9" class="text-decoration-none p-1">Math.round() |</a></li>
+                                <li class="list-inline-item"><a href="#tb_10" class="text-decoration-none p-1">Math.random() |</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+
+                </article>
+                
+
+                </articler>
+
+
+
+        </section>
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <footer class="p-1 mb-2 bg-dark text-start row">
+
+            <p class="text-white col-12">Para mais conteudo: <br> <a
+                    href="http://denilsomlobo.epizy.com/">denilsomlobo.epizy.com</a> </p>
+            <p class="text-white col-12">Menu da página:</p>
+            <nav>
+                <ul class="list-inline col-12">
+                    <li class="list-inline-item"><a href="index.html" class="text-decoration-none text-white">Home</a>
+                    </li>
+                    <li class="list-inline-item"><a href="index.html" class="text-decoration-none text-white">Mais
+                            paginas</a></li>
+                    <li class="list-inline-item"><a href="https://linkedin.com/in/denilsom-lobo-de-souza-2b6614230"
+                            class="text-decoration-none text-white">Linkedin</a></li>
+                </ul>
+                <br>
+            </nav>
+            <h5 class="text-white text-end">Criado por Denilsom Lobo de Souza</h5>
+        </footer>
+
+
+
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+            integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+            integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>
