@@ -3,6 +3,29 @@
     padding: 0;
 }
 
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+nav ul li a {
+    color:aliceblue;
+    font-size: 1.6em;
+    padding: 20px;
+}
+
+th {
+    font-size: 1.9em;
+}
+
+td {
+    font-size: 1.9em;
+}
+
+a:hover {
+    color: blue;
+}
+
 button:hover{
     background-color: rgb(147, 146, 146);
 }
@@ -37,7 +60,7 @@ button:hover{
 .calculadora {
     position: absolute;
     background-color: #025373;
-    top: 115%;
+    top: 110%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 15px;
