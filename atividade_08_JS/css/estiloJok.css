@@ -1,0 +1,11 @@
+.botao {
+
+    margin: 3px;
+    border-radius: 3px;
+    font-size: 25px;
+    cursor: pointer;
+    background-color: black;
+    border: none;
+    color: #fff;
+    box-shadow: 2px 2px 3px #000
+}

@@ -385,7 +385,7 @@
 
                     <div class="row">
                         <div class="col-4 p-3 bg-dark">
-                            <a name="tb_4"><h1 class="m-3 p-3 bg-dark text-white">Cálculo trigonométrico:</h1></a>
+                            <a name="tb_4"><h1 class="m-3 p-3 bg-dark text-white">Cálculo trigonométrico: Hipotenusa</h1></a>
                         </div>
 
                         <div class="col-4 p-3 bg-dark">
@@ -415,21 +415,20 @@
 
                             <div class="row">
                                 <div class="col-4">
-                                    <h1>Coeficiente A:</h1>
-                                    <input id="num1" type="number">
+                                    <h1>Insira cateto adjacente</h1>
+                                    <input id="ca" type="number">
                                 </div>
         
                                 <div class="col-4">
 
-                                    <h1>Coeficiente B:</h1>
-                                    <input id="num2" type="number">
+                                    <h1>Insira cateto oposto</h1>
+                                    <input id="co" type="number">
                                     
                                 </div>
                                 
                                 <div class="col-4">
 
-                                    <h1>Coeficiente C:</h1>
-                                    <input id="num3" type="number">
+
                                     
                                 </div>
 
@@ -444,7 +443,7 @@
                                 </div>
         
                                 <div class="col-4 d-flex justify-content-center">
-                                    <button onclick="raiz()">Calcular raízes</button>
+                                    <button onclick="calcularHipotenusa()">Calcular Hipotenusa</button>
                                 </div>
         
                                 <div class="col-4">
@@ -455,12 +454,13 @@
                             <br><br><br><br>
 
                             <div class="row">
-                                <div class="col-4">
+                                <div class="col-4 d-flex justify-content-end">
+                                    <h3>Resultado:</h3>
                                     
                                 </div>
         
                                 <div class="col-4 d-flex justify-content-center">
-                                    <p id='resposta'></p>
+                                    <h3 id='respostaHipo'></h3>
                                 </div>
         
                                 <div class="col-4">
@@ -469,33 +469,13 @@
                             </div>
 
                             <script type="text/javascript">
-                                function raiz(){
-                                  var a = parseFloat(document.getElementById("num1").value);
-                                  var b = parseFloat(document.getElementById("num2").value);
-                                  var c = parseFloat(document.getElementById("num3").value);
-                                  ans = document.getElementById('resposta');
-                           
-                                  var delta = (b*b) - 4*a*c;
-                           
-                                  if (delta>0){
-                                   raiz1 = (-b + Math.sqrt(delta) )/(2*a);
-                                   raiz2 = (-b - Math.sqrt(delta) )/(2*a);
-                           
-                                   ans.innerHTML = "Raiz 1: " + raiz1 + "<br/>" +"Raiz 2: " + raiz2;
-                                  }else{
-                                   if (delta==0){
-                                    raiz = (-b + Math.sqrt(delta) )/(2*a);
-                                    ans.innerHTML="Raiz dupla: " + raiz;
-                                   }else{
-                                    real = (-b)/(2*a);
-                                    img1  = Math.sqrt(-delta)/(2*a);
-                                    img2  = - Math.sqrt(-delta)/(2*a);
-                           
-                                    ans.innerHTML = "Raiz 1: " + real + "+" + img1+"i"+"<br/>" +
-                                        "Raiz 2: " + real + "+" + img2+"i"
-                                   }
-                                  }
-                                }
+            function calcularHipotenusa() {
+                let catetoAdjacente = document.getElementById('ca').value
+                let catetoOposto = document.getElementById('co').value
+                let hipotenusa = Math.sqrt(Math.pow(catetoAdjacente, 2) + Math.pow(catetoOposto, 2))
+                
+                document.getElementById('respostaHipo').innerHTML = hipotenusa
+            }
                                </script>
                         </section>
 
